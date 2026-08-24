@@ -1,0 +1,51 @@
+### Found Cases
+
+### 1. Match Anker PowerCore
+POST http://localhost:4500/ask?debug=true
+Content-Type: application/json
+
+{
+  "question": "How much is the Anker PowerCore 20000mAh?"
+}
+
+### 2. Match Baseus
+POST http://localhost:4500/ask?debug=true
+Content-Type: application/json
+
+{
+  "question": "Do you have any Baseus products?"
+}
+
+### 3. Match Power Banks
+POST http://localhost:4500/ask?debug=true
+Content-Type: application/json
+
+{
+  "question": "Show me power banks under 2000 taka."
+}
+
+### Not Available Cases
+
+### 4. Out of Domain
+POST http://localhost:4500/ask?debug=true
+Content-Type: application/json
+
+{
+  "question": "Do you sell washing machines?"
+}
+
+### 5. Specific Product not found
+POST http://localhost:4500/ask?debug=true
+Content-Type: application/json
+
+{
+  "question": "How much is the iPhone 17 Pro Max?"
+}
+
+### 6. Misspellings / No Product
+POST http://localhost:4500/ask?debug=true
+Content-Type: application/json
+
+{
+  "question": "what is your return policy?"
+}
