@@ -44,8 +44,8 @@ async function handleAskQuestion(req, res) {
     }
 
     // 3. Search Knowledge Base
-    // 0.60 is an initial threshold that we'll test and justify in README
-    const SIMILARITY_THRESHOLD = 0.60;
+    // 0.70 is an initial threshold that we'll test and justify in README
+    const SIMILARITY_THRESHOLD = 0.70;
     const matches = searchKnowledgeBase(questionVector, knowledgeBase, SIMILARITY_THRESHOLD, 3);
 
     // 4. If no matches clear threshold, return exact required fail response without calling chat model
