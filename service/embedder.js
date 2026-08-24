@@ -13,7 +13,7 @@ const ai = new GoogleGenAI({
 async function generateEmbedding(text) {
   try {
     const response = await ai.models.embedContent({
-      model: 'text-embedding-004',
+      model: 'gemini-embedding-2',
       contents: text
     });
     return response.embeddings[0].values;
@@ -40,7 +40,7 @@ Answer:`;
 
   try {
     const response = await ai.models.generateContent({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-3.5-flash',
         contents: prompt
     });
     return response.text;
